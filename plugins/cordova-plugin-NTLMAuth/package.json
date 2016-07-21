@@ -1,0 +1,19 @@
+{
+  "name": "NTLMAuth",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-NTLMAuth",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Bao Pham",
+  "license": "ISC"
+}

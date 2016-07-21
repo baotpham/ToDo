@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-NTLMAuth" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<name>NTLMAuth</name>
+	
+	<js-module name="NTLMAuth" src="www/NTLMAuth.js">
+		<clobbers target="ntlmAuth" />
+	</js-module>
+	
+	
+
+	<platform name="android">
+
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="NTLMAuth">
+				<param name="android-package" value="com.pfizer.plugin.NTLMAuth" />
+			</feature>
+		</config-file>
+
+		<config-file parent="/*" target="AndroidManifest.xml" />
+
+		<config-file parent="/*" target="AndroidManifest.xml">
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+
+		<source-file src="src/android/com/pfizer/plugin/NTLMAuth.java" target-dir="src/com/pfizer/plugin/"/>
+		<source-file src="src/android/com/pfizer/plugin/NtlmMethods.java" target-dir="src/com/pfizer/plugin/"/>
+		<source-file src="src/android/com/pfizer/plugin/HttpManager.java" target-dir="src/com/pfizer/plugin/"/>
+		<source-file src="src/android/com/pfizer/plugin/NTLMSchemeFactory.java" target-dir="src/com/pfizer/plugin/"/>
+		<source-file src="src/android/com/pfizer/plugin/JCIFSEngine.java" target-dir="src/com/pfizer/plugin/"/>
+
+		<source-file src="src/android/libs/jwebservices-2.0.jar" target-dir="libs" framework="true" />
+		<!--<source-file src="src/android/android-support-4.0.jar" target-dir="libs" framework="true" /> -->
+	</platform>
+	
+	
+
+	
+	<platform name="ios">
+
+		<config-file parent="/*" target="config.xml">
+			<feature name="NTLMAuth">
+				<param name="ios-package" value="NTLMAuth" />
+			</feature>
+		</config-file>
+
+		<source-file src="src/ios/NTLMAuth.swift" />
+		<source-file src="src/ios/NetworkManager.swift" />
+		<source-file src="src/ios/KeychainWrapper.swift" />
+		<source-file src="src/ios/NtlmMethods.swift" />
+	</platform>
+
+</plugin>
