@@ -6,9 +6,9 @@
 
 
 //setup angular
-var app = angular.module('todo-app', ['ionic', 'LocalStorageModule']);
+angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services'])
 
-app.run(function($ionicPlatform) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -24,126 +24,22 @@ app.run(function($ionicPlatform) {
       StatusBar.styleDefault();
     }
   });
-});
+})
 
-app.config(function (localStorageServiceProvider) {
-    localStorageServiceProvider
-        .setPrefix('todo-app')
-});
 
-app.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $ionicModal, $state) {
-    $scope.data = {};
-
-    $scope.login = function() {
-        LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            var alertPopup = $ionicPopup.alert({
-                title: 'Login success!',
-                template: 'Welcome ' + $scope.data.username + '!'
-            });
-            $scope.listTaskModal.show();
-        }).error(function(data) {
-            var alertPopup = $ionicPopup.alert({
-                title: 'Login failed!',
-                template: 'Please check your credentials!'
-            });
-        });
-    }
+.config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
     
-    $ionicModal.fromTemplateUrl('list-task-modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-    }).then(function (modal) {
-        $scope.listTaskModal = modal;
-    });
+    localStorageServiceProvider
+        .setPrefix('todo-app');
+    
+    $stateProvider
+        .state('login', {
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+        });
 
-    $scope.openListTaskModal = function () {
-        $scope.listTaskModal.show();
-    };
+    $urlRouterProvider
+        .otherwise('/login');
 
-    $scope.closeListTaskModal = function () {
-        $scope.listTaskModal.hide();
-    };
-});
-
-app.service('LoginService', function($q) {
-    return {
-        loginUser: function(name, pw) {
-            var deferred = $q.defer();
-            var promise = deferred.promise;
- 
-            if (name == 'user' && pw == 'secret') {
-                deferred.resolve('Welcome ' + name + '!');
-            } else {
-                deferred.reject('Wrong credentials.');
-            }
-            promise.success = function(fn) {
-                promise.then(fn);
-                return promise;
-            }
-            promise.error = function(fn) {
-                promise.then(null, fn);
-                return promise;
-            }
-            return promise;
-        }
-    }
-});
-
-app.controller('main', function ($scope, $ionicModal, localStorageService) {
-    //store the entities name in a variable
-
-    var taskData = 'task';
-
-    //initialize the tasks scope with empty array
-    $scope.tasks = [];
-
-    //initialize the task scope with empty object
-    $scope.task = {};
-
-    //configure the ionic modal before use
-    $ionicModal.fromTemplateUrl('new-task-modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-    }).then(function (modal) {
-        $scope.newTaskModal = modal;
-    });
-
-    $scope.getTasks = function () {
-        //fetches task from local storage
-        if (localStorageService.get(taskData)) {
-            $scope.tasks = localStorageService.get(taskData);
-        } else {
-            $scope.tasks = [];
-        }
-    };
-
-    $scope.createTask = function () {
-        //creates a new task
-        $scope.tasks.push($scope.task);
-        localStorageService.set(taskData, $scope.tasks);
-        $scope.task = {};
-
-        //close new task modal
-        $scope.newTaskModal.hide();
-    };
-
-    $scope.removeTask = function (index) {
-        //removes a task
-        $scope.tasks.splice(index, 1);
-        localStorageService.set(taskData, $scope.tasks);
-    };
-
-
-    $scope.completeTask = function (index) {
-        //updates a task as completed
-        localStorageService.set(taskData, $scope.tasks);
-    };
-
-    $scope.openNewTaskModal = function () {
-        $scope.newTaskModal.show();
-    };
-
-    $scope.closeNewTaskModal = function () {
-        $scope.newTaskModal.hide();
-    };
 });
