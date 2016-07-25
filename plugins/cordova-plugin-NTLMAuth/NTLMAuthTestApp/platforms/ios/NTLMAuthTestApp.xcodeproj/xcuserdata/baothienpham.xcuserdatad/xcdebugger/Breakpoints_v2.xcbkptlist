@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+            timestampString = "489952136.480628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "retrieveData(_:success:failure:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed and Exploded, Arg[2] = Owned To Guaranteed, Arg[3] = Owned To Guaranteed, Arg[4] = Owned To Guaranteed, Arg[5] = Owned To Guaranteed&gt; of NTLMAuthTestApp.NetworkManager.action (__ObjC.NSURL, methodName : Swift.String, headers : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, data : Swift.Optional&lt;__ObjC.NSDictionary&gt;, success : (Swift.String) -&gt; Swift.String, failure : (__ObjC.NSError) -&gt; __ObjC.NSError) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952152.553788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "3178">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed and Exploded, Arg[2] = Owned To Guaranteed, Arg[3] = Owned To Guaranteed, Arg[4] = Owned To Guaranteed, Arg[5] = Owned To Guaranteed&gt; of NTLMAuthTestApp.NetworkManager.action (__ObjC.NSURL, methodName : Swift.String, headers : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, data : Swift.Optional&lt;__ObjC.NSDictionary&gt;, success : (Swift.String) -&gt; Swift.String, failure : (__ObjC.NSError) -&gt; __ObjC.NSError) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952152.553989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "4035">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed and Exploded, Arg[2] = Owned To Guaranteed, Arg[3] = Owned To Guaranteed, Arg[4] = Owned To Guaranteed, Arg[5] = Owned To Guaranteed&gt; of NTLMAuthTestApp.NetworkManager.action (__ObjC.NSURL, methodName : Swift.String, headers : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, data : Swift.Optional&lt;__ObjC.NSDictionary&gt;, success : (Swift.String) -&gt; Swift.String, failure : (__ObjC.NSError) -&gt; __ObjC.NSError) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952152.554152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "5166">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed and Exploded, Arg[2] = Owned To Guaranteed, Arg[3] = Owned To Guaranteed, Arg[4] = Owned To Guaranteed, Arg[5] = Owned To Guaranteed&gt; of NTLMAuthTestApp.NetworkManager.action (__ObjC.NSURL, methodName : Swift.String, headers : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, data : Swift.Optional&lt;__ObjC.NSDictionary&gt;, success : (Swift.String) -&gt; Swift.String, failure : (__ObjC.NSError) -&gt; __ObjC.NSError) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952152.554309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "5873">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+            timestampString = "489952142.219823"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "retrieveData(_:success:failure:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+            timestampString = "489952187.227056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "URLSession(_:task:didReceiveChallenge:completionHandler:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NTLMAuthTestApp.NetworkManager.URLSession (__ObjC.NSURLSession, task : __ObjC.NSURLSessionTask, didReceiveChallenge : __ObjC.NSURLAuthenticationChallenge, completionHandler : (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952187.229343"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead and Owned To Guaranteed, Arg[1] = Owned To Guaranteed, Arg[2] = Owned To Guaranteed&gt; of function signature specialization &lt;Arg[3] = [Closure Propagated : reabstraction thunk helper from @callee_unowned @convention(block) (@unowned __C.NSURLSessionAuthChallengeDisposition, @unowned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ()) to @callee_owned (@unowned __C.NSURLSessionAuthChallengeDisposition, @owned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ()), Argument Types : [@callee_unowned @convention(block) (@unowned __C.NSURLSessionAuthChallengeDisposition, @unowned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ())]&gt; of NTLMAuthTestApp.NetworkManager.URLSession (__ObjC.NSURLSession, task : __ObjC.NSURLSessionTask, didReceiveChallenge : __ObjC.NSURLAuthenticationChallenge, completionHandler : (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952187.229542"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+            timestampString = "489952188.495994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "URLSession(_:task:didReceiveChallenge:completionHandler:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NTLMAuthTestApp.NetworkManager.URLSession (__ObjC.NSURLSession, task : __ObjC.NSURLSessionTask, didReceiveChallenge : __ObjC.NSURLAuthenticationChallenge, completionHandler : (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952188.498087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "831">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead and Owned To Guaranteed, Arg[1] = Owned To Guaranteed, Arg[2] = Owned To Guaranteed&gt; of function signature specialization &lt;Arg[3] = [Closure Propagated : reabstraction thunk helper from @callee_unowned @convention(block) (@unowned __C.NSURLSessionAuthChallengeDisposition, @unowned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ()) to @callee_owned (@unowned __C.NSURLSessionAuthChallengeDisposition, @owned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ()), Argument Types : [@callee_unowned @convention(block) (@unowned __C.NSURLSessionAuthChallengeDisposition, @unowned Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; (@unowned ())]&gt; of NTLMAuthTestApp.NetworkManager.URLSession (__ObjC.NSURLSession, task : __ObjC.NSURLSessionTask, didReceiveChallenge : __ObjC.NSURLAuthenticationChallenge, completionHandler : (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__ObjC.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NTLMAuthTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuthTestApp/platforms/ios/NTLMAuthTestApp/Plugins/cordova-plugin-NTLMAuth/NetworkManager.swift"
+                  timestampString = "489952188.498275"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "808">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

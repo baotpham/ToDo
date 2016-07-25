@@ -49,8 +49,9 @@
     },
     "cordova-plugin-NTLMAuth": {
         "source": {
-            "type": "local",
-            "path": "/Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuth"
+            "type": "git",
+            "url": "https://github.com/pfizer/Mobile-Reuse-Hybrid-NTLMAuth.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

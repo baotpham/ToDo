@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
 
-.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $ionicModal, $state) {
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
 
     $scope.login = function() {
@@ -9,7 +9,8 @@ angular.module('app.controllers', [])
                 title: 'Login success!',
                 template: 'Welcome ' + $scope.data.username + '!'
             });
-            $scope.listTaskModal.show();
+            $state.go('toDoList')
+            // $scope.listTaskModal.show();
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
@@ -17,26 +18,11 @@ angular.module('app.controllers', [])
             });
         });
     }
-    
-    $ionicModal.fromTemplateUrl('list-task-modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-    }).then(function (modal) {
-        $scope.listTaskModal = modal;
-    });
-
-    $scope.openListTaskModal = function () {
-        $scope.listTaskModal.show();
-    };
-
-    $scope.closeListTaskModal = function () {
-        $scope.listTaskModal.hide();
-    };
 })
 
 
 
-.controller('main', function ($scope, $ionicModal, localStorageService) {
+.controller('toDoListCtrl', function ($scope, $ionicModal, localStorageService) {
     //store the entities name in a variable
 
     var taskData = 'task';
@@ -48,7 +34,8 @@ angular.module('app.controllers', [])
     $scope.task = {};
 
     //configure the ionic modal before use
-    $ionicModal.fromTemplateUrl('new-task-modal.html', {
+    //$ionicModal.fromTemplateUrl('createTodo-modal.html', {
+    $ionicModal.fromTemplateUrl('templates/modals/createTodo-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
     }).then(function (modal) {
@@ -88,9 +75,10 @@ angular.module('app.controllers', [])
 
     $scope.openNewTaskModal = function () {
         $scope.newTaskModal.show();
+        console.log("here")
     };
 
     $scope.closeNewTaskModal = function () {
         $scope.newTaskModal.hide();
     };
-});
+})

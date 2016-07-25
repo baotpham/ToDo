@@ -1,0 +1,60 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NTLMAuth\"><param name=\"android-package\" value=\"com.pfizer.plugin.NTLMAuth\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        },
+        "android.support.v4": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        },
+        "cordova-plugin-NTLMAuth": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-NTLMAuth/www/NTLMAuth.js",
+            "id": "cordova-plugin-NTLMAuth.NTLMAuth",
+            "clobbers": [
+                "ntlmAuth"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "android.support.v4": "21.0.1",
+        "cordova-plugin-NTLMAuth": "0.0.1"
+    }
+}

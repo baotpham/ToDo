@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        },
+        "android.support.v4": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        },
+        "cordova-plugin-NTLMAuth": {
+            "PACKAGE_NAME": "com.pfizer.ntlmAuthTestApp"
+        }
+    },
+    "dependent_plugins": {}
+}

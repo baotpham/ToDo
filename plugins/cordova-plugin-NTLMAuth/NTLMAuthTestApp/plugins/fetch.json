@@ -1,0 +1,27 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "android.support.v4": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/floatinghotpot/cordova-plugin-android-support-v4",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-NTLMAuth": {
+        "source": {
+            "type": "local",
+            "path": "/Users/baothienpham/Documents/Mobile-Reuse-Hybrid-NTLMAuth/NTLMAuth"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

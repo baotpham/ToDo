@@ -1,3 +1,5 @@
+// var ntlmPlugin = require('./plugin/cordova-plugin-NTLMAuth/www/NTLMAuth');
+
 angular.module('app.services', [])
 
 .service('LoginService', function($q) {
@@ -5,12 +7,19 @@ angular.module('app.services', [])
         loginUser: function(name, pw) {
             var deferred = $q.defer();
             var promise = deferred.promise;
- 
-            if (name == 'user' && pw == 'secret') {
-                deferred.resolve('Welcome ' + name + '!');
-            } else {
-                deferred.reject('Wrong credentials.');
-            }
+            // var ntlmPlugin = NTLMAuth
+            NTLMPlugin.callNtlmMethods(
+                [name, pw, "http://events-dev.pfizer.com/ldap", "", "GET", "", ""],
+                function callback(data) {
+                    //alert("Response from plugin: " + data);
+                    deferred.resolve('Welcome ' + name + '!');
+                },
+                function errorHandler(err) {
+                    //alert("Response from plugin (error): " + err);
+                    deferred.reject('Wrong credentials.');
+                }
+            );
+
             promise.success = function(fn) {
                 promise.then(fn);
                 return promise;

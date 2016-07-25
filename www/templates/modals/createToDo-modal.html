@@ -1,0 +1,36 @@
+        
+        
+        
+        <ion-modal-view>
+           <ion-header-bar class="bar-dark">
+                <h1 class="title">Create a new Task</h1>
+                <button class="button button-icon" ng-click="closeNewTaskModal()">
+                    <i class="icon ion-android-close"></i>
+                </button>
+            </ion-header-bar> 
+            <ion-content>
+                <form ng-submit="createTask()">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <input ng-model="task.title" type="text" placeholder="Task title">
+                        </label>
+                        <label class="item item-input">
+                            <textarea ng-model="task.content" rows="5" placeholder="Task content"></textarea>
+                        </label>
+                        <ul class="list">
+                            <li class="item item-toggle">
+                                Completed?
+                                <label class="toggle toggle-balanced">
+                                    <input type="checkbox" ng-model="task.completed">
+
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="submit" class="button button-block button-positive" ng-click="closeNewTaskModal()" ng-click="createTask()">Create Task</button>
+                    </div>
+                </form>
+            </ion-content>
+        </ion-modal-view>

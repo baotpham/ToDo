@@ -10,7 +10,7 @@ angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'a
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard && window.cordova.plugins.NTLMAuth) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -26,6 +26,9 @@ angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'a
   });
 })
 
+.factory('NTLMAuth', function(){
+
+})
 
 .config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
     
@@ -37,8 +40,14 @@ angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'a
             url: '/login',
             templateUrl: 'templates/login.html',
             controller: 'LoginCtrl'
+        })
+        .state('toDoList', {
+            url: '/toDoList',
+            templateUrl: 'templates/toDoList.html',
+            controller: 'toDoListCtrl'
         });
-
+      
+    // if none of the above states are matched, use this as the fallback
     $urlRouterProvider
         .otherwise('/login');
 
