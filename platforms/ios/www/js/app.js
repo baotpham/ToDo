@@ -6,11 +6,11 @@
 
 
 //setup angular
-var app = angular.module('todo-app', ['ionic', 'LocalStorageModule']);
+angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services', 'cordova.plugins.NTLMAuth'])
 
-app.run(function($ionicPlatform) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard && window.cordova.plugins.NTLMAuth) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -24,68 +24,31 @@ app.run(function($ionicPlatform) {
       StatusBar.styleDefault();
     }
   });
-});
+})
 
-app.config(function (localStorageServiceProvider) {
+.factory('NTLMAuth', function(){
+
+})
+
+.config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
+    
     localStorageServiceProvider
-        .setPrefix('todo-app')
-});
+        .setPrefix('todo-app');
+    
+    $stateProvider
+        .state('login', {
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+        })
+        .state('toDoList', {
+            url: '/toDoList',
+            templateUrl: 'templates/toDoList.html',
+            controller: 'toDoListCtrl'
+        });
+      
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider
+        .otherwise('/login');
 
-app.controller('main', function ($scope, $ionicModal, localStorageService) {
-    //store the entities name in a variable
-
-    var taskData = 'task';
-
-    //initialize the tasks scope with empty array
-    $scope.tasks = [];
-
-    //initialize the task scope with empty object
-    $scope.task = {};
-
-    //configure the ionic modal before use
-    $ionicModal.fromTemplateUrl('new-task-modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-    }).then(function (modal) {
-        $scope.newTaskModal = modal;
-    });
-
-    $scope.getTasks = function () {
-        //fetches task from local storage
-        if (localStorageService.get(taskData)) {
-            $scope.tasks = localStorageService.get(taskData);
-        } else {
-            $scope.tasks = [];
-        }
-    };
-
-    $scope.createTask = function () {
-        //creates a new task
-        $scope.tasks.push($scope.task);
-        localStorageService.set(taskData, $scope.tasks);
-        $scope.task = {};
-
-        //close new task modal
-        $scope.newTaskModal.hide();
-    };
-
-    $scope.removeTask = function (index) {
-        //removes a task
-        $scope.tasks.splice(index, 1);
-        localStorageService.set(taskData, $scope.tasks);
-    };
-
-
-    $scope.completeTask = function (index) {
-        //updates a task as completed
-        localStorageService.set(taskData, $scope.tasks);
-    };
-
-    $scope.openTaskModal = function () {
-        $scope.newTaskModal.show();
-    };
-
-    $scope.closeTaskModal = function () {
-        $scope.newTaskModal.hide();
-    };
 });

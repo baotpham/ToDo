@@ -6,7 +6,7 @@
 
 
 //setup angular
-angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services'])
+angular.module('todo-app', ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services', 'cordova.plugins.NTLMAuth'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

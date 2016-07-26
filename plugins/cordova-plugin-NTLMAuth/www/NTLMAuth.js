@@ -2,12 +2,12 @@ var exec = require('cordova/exec');
 
 var NTLMAuth = {
   callNtlmMethods: function(arrayArgs, success, error){
-    exec(success, 
-        error, 
-        "NTLMAuth", 
-        "callNtlmMethods", 
-        arrayArgs
-        );  
+      exec(success, 
+          error, 
+          "NTLMAuth", 
+          "callNtlmMethods", 
+          arrayArgs
+          );  
   }
 };
 

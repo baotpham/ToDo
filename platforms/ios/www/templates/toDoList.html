@@ -1,0 +1,37 @@
+<ion-modal-view ng-controller="toDoListCtrl" ng-init="getTasks()">
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">ToDo</h1>
+
+        <!-- New Task button-->
+        <button class="button button-icon" ng-click="openNewTaskModal()">
+            <i class="icon ion-compose"></i>
+        </button>
+    </ion-header-bar>
+    
+    <ion-content>
+        <div class="list card" ng-repeat="task in tasks track by $index">
+            <div class="item item-divider">
+                <span ng-bind="task.title"></span>
+            </div>
+            <div class="item item-body">
+                <strong>Title: <span ng-bind="task.title"></span></strong>
+
+                <p>
+                    <span ng-bind="task.content"></span>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <span class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="task.completed" ng-click="completeTask($index)">
+                    </label>
+                </span>
+                <a class="tab-item assertive" ng-click="removeTask($index)">
+                    <i class="icon ion-android-close"></i>
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-modal-viewpane>
